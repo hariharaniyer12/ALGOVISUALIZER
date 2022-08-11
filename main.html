@@ -1,1 +1,105 @@
 
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Demo</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+   
+    <link rel="stylesheet" href="nisarg.css"> 
+  </head>
+  <body>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      
+
+      <h1 class="navbar-brand"> <span style="color: coral;"> DEMO</h1>
+
+
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+         <ul class="navbar-nav mr-auto mt-2 mt-lg-0 d-md-inline-flex">
+
+            <li class="nav-item" style=" padding-top: 10px;">
+               <button class="btn btn-outline-primary my-2 my-sm-1" data-toggle="modal" data-target="#exampleModalCenter"  type="submit" id="custom-array"> <i class="fa fa-pencil" aria-hidden="true"></i> Custom</button>
+            </li>
+
+            <li class="nav-item" style=" padding-top: 5px;display: none;">
+               <div class="form-group">
+                  <label for="formControlRange" id="Asize">Size</label>
+                  <input type="range" class="form-control-range input" min="5" max="300" value="30" data-toggle="tooltip" title="Size of the Array" id="size-array">
+               </div>
+            </li>
+
+
+            <li class="nav-item" style=" padding-top: 5px;display: none;">
+               <div class="form-group">
+                  <label for="formControlRange" id="Aspeed">Animation</label>
+                  <input type="range" min="0" max="5" value="2" step="1" class="form-control-range" id="speed" data-toggle="tooltip" title="Speed of the Animation">
+                </div>
+            </li>
+
+
+            <li class="nav-item" style=" padding-top: 10px;">
+               <select class="custom-select" id="algo" data-toggle="tooltip" title="List of Algorithms">
+                  <option value="bubble" selected>Bubble Sort</option>
+                </select>
+            </li>
+         </ul>
+         <button class="btn btn-outline-success my-5 mx-1 my-md-0" type="submit" id="run-button"><i class="fa fa-play" aria-hidden="true"> </i>  RUN ALGO!</button>
+         <button class="btn btn-outline-warning my-5 mx-1 my-md-0" type="submit" id="skip-button" style="margin-left: 15px;display: none;"><i class="fa fa-fast-forward" aria-hidden="true"> </i>  SKIP!</button>
+      </div>
+   </nav>
+   
+   <div id="array-space">
+   
+   </div> 
+   
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content bg-light">
+         <div class="modal-header">
+            <h4 class="modal-title mx-auto text-success" id="exampleModalCenterTitle">Input the Desired Array</h4>
+         </div>
+         <div class="modal-body">
+            <form>
+               <div class="form-group">
+                  <label for="modal-size" class="col-form-label text-info">Size of Array:</label>
+                  <input type="text" class="form-control" id="modal-size">
+                  <div class="text-danger" id="size-error"></div>
+                  <!-- <small class="form-text text-muted">* Size Should be in Range (5 - 300)</small> -->
+               </div>
+               <div class="form-group">
+                  <label for="modal-text" class="col-form-label text-info">Elements of Array:</label>
+                  <textarea class="form-control" id="modal-text"></textarea>
+                  <div class="text-danger" id="text-error"></div>
+                  <!-- <small class="form-text text-muted">* Enter space seperated integers ,Total of above size.</small>
+                  <small class="form-text text-muted">* For better Visibility each interger is of range (21 - 550).</small> -->
+               </div>
+            </form>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="modal-save">Save changes</button>
+         </div>
+      </div>
+   </div>
+   </div>
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="nisarg.js"></script>
+    <script src="./sort_algo/bubble.js"></script>
+  </body>
+</html>
