@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algorithm Visualizer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styel.css">
     
 </head>
 <link href='https://fonts.googleapis.com/css?family=Baloo Bhai' rel='stylesheet'>
@@ -20,24 +20,51 @@
 
     <nav id="navigation">
         <ul id="bubble sort">
-            <li class="sorting"><a href="https://google.com">Bubble Sort</a></li>
+            <li class="sorting"><a href="https>Bubble Sort</a></li>
             <li class="sorting"><a href>Quick Sort</a></li>
             <li class="sorting"><a href>Insertion Sort</a></li>
             <li class="sorting"><a href>Selection Sort</a></li>
             <li class="sorting"><a href>Merge Sort</a></li>
             <li class="sorting"><a href>Linear Search</a></li>
         </ul>
+        
     </nav>
 
     <section id="arraybtn">
-        <button id="Array">Genrate Array</button>
-        <!-- <label for="vol">Speed</label>
-        <input type="range" id="vol" name="vol" min="0" max="50"> -->
-  
+        <div> 
+        <button id="Array" class="custom" name="custom">Custom Array</button>
+        </div>
+
+        <div class="popup">
+            <div class="popup-content">
+                <img src="close.png" alt="close" class="close">
+                <div>
+                <label for="array_size" class="label">Size Of Array</label>
+                </div>
+                <input type="text" id="array_size" name="array_size" class="input">
+                <br>
+                <div>
+                <label for="array_elements" class="label">Enter Elements Of Array</label>
+                </div>
+                <input type="text" id="array_elements" name="array_elements" class="input">
+                <br>
+                <button class="btn">Save</button>
+            </div>
+        </div>
+        <label for="vol" class="range">Speed</label>
+        <input type="range" id="vol" name="vol" min="0" max="50" class="slider">
         <button id="run">RUN</button>
         <button id="reset">RESET</button>
     </section>
+    <script>
+        document.getElementById("Array").addEventListener("click", function(){
+            document.querySelector(".popup").style.display="flex";
+        })
 
+        document.querySelector(".close").addEventListener("click",function(){
+            document.querySelector(".popup").style.display = "none";
+        })
+    </script>
     
 </body>
 </html>
