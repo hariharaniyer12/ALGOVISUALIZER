@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algorithm Visualizer</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
     
 </head>
 <link href='https://fonts.googleapis.com/css?family=Baloo Bhai' rel='stylesheet'>
@@ -32,39 +32,60 @@
 
     <section id="arraybtn">
         <div> 
-        <button id="Array" class="custom" name="custom">Custom Array</button>
+        <button class="custom" name="custom"  type="submit" id="custom">Custom Array</button>
         </div>
 
-        <div class="popup">
-            <div class="popup-content">
-                <img src="close.png" alt="close" class="close">
-                <div>
-                <label for="array_size" class="label">Size Of Array</label>
+        
+
+            <!-- Modal Section  -->
+            <div class="bg-modal">
+                <div class="modal-contents">
+                    <div class="close"></div>
+                    <div class="modal-header">
+                        <h4 class="modal-title mx-auto text-success" id="exampleModalCenterTitle">Input the Desired Array</h4>
+                     </div>
+                     <div class="modal-body">
+                        <form>
+                           <div class="form-group">
+                              <label for="modal-size" class="col-form-label text-info">Size of Array:</label>
+                              <input type="text" class="form-control" id="modal-size">
+                              <div class="text-danger" id="size-error"></div>
+                              <small class="form-text text-muted">* Size Should be in Range (5 - 300)</small>
+                           </div>
+                           
+                           <div class="form-group">
+                              <label for="modal-text" class="col-form-label text-info">Elements of Array:</label>
+                              <textarea class="form-control" id="modal-text"></textarea>
+                              <div class="text-danger" id="text-error"></div>
+                              <small class="form-text text-muted">* Enter space seperated integers ,Total of above size.</small>
+                              <br>
+                              <small class="form-text text-muted">* For better Visibility each interger is of range (21 - 550).</small>
+                           </div>
+                           
+                        </form>
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="modal-save">Save changes</button>
+                     </div>
+                  </div>
                 </div>
-                <input type="text" id="array_size" name="array_size" class="input">
-                <br>
-                <div>
-                <label for="array_elements" class="label">Enter Elements Of Array</label>
-                </div>
-                <input type="text" id="array_elements" name="array_elements" class="input">
-                <br>
-                <button class="btn">Save</button>
-            </div>
-        </div>
+            
         <label id="speed" for="vol" class="range">Speed</label>
         <input type="range" min="0" max="5" value="2" step="1" class="slider" id="vol" data-toggle="tooltip" title="Speed of the Animation">
         <button id="run">RUN</button>
         <button id="reset">RESET</button>
     </section>
     <script>
-        document.getElementById("Array").addEventListener("click", function(){
-            document.querySelector(".popup").style.display="flex";
+        document.getElementById("custom").addEventListener("click", function(){
+            document.querySelector(".bg-modal").style.display="flex";
         })
 
         document.querySelector(".close").addEventListener("click",function(){
-            document.querySelector(".popup").style.display = "none";
+            document.querySelector(".bg-modal").style.display = "none";
         })
     </script>
+  
     
 </body>
 </html>
