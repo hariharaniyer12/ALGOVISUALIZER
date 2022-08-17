@@ -7,7 +7,7 @@ body{
     display: flex;
     color: blue;
     
-    padding-left: 441px;
+    padding-left: 400px;
     
 }
 
@@ -63,6 +63,7 @@ ul{
 
 #arraybtn{
     display: flex;
+    
 }
 
 #Array{
@@ -84,7 +85,7 @@ ul{
     margin-top: 40px;
     padding: 10px 10px;
     border-radius: 15px;
-    margin-left: 850px;
+    margin-left: 700px;
 }
 
 #run:hover{
@@ -109,25 +110,7 @@ ul{
     padding-left: 50px;
 }
 
-.popup{
-    background: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 130%;
-    position: absolute;
-    top: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.popup-content{
-    height: 250px;
-    width: 500px;
-    background: #ffff;
-    padding: 20px;
-    border-radius: 5px;
-    position: relative;
-}
+
 
 .close{
     position: absolute;
@@ -159,7 +142,7 @@ ul{
 }
 
 .range{
-    margin-top: 40px;
+    margin-top: 20px;
     margin-right: 90px;
     text-align: justify;
     padding-left: 52px;
@@ -167,6 +150,46 @@ ul{
 
  .slider{
     color: red;
-    margin-top: 70px;
+    margin-top: 40px;
     margin-left: -169px;
 } 
+
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-contents{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: medium;   
+    position: relative; 
+}
+
+.input{
+    width: 300px;
+    display: block;
+    margin: 15px auto;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotateX(45deg);
+    cursor: pointer;
+    background-color: black;
+}
