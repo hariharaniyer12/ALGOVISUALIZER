@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algorithm Visualizer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="try.css">
     
 </head>
 <link href='https://fonts.googleapis.com/css?family=Baloo Bhai' rel='stylesheet'>
@@ -17,6 +17,7 @@
         <p id="null">|</p>
         <p id="signup">SIGNUP</p>
     </box>
+
 
     <nav id="navigation">
         <ul id="bubble sort">
@@ -30,12 +31,12 @@
         
     </nav>
 
+    <div id="array-space"></div>
+
     <section id="arraybtn">
         <div> 
-        <button class="custom" name="custom"  type="submit" id="custom">Custom Array</button>
+        <button class="custom" name="custom"  type="submit" id="custom-array">Custom Array</button>
         </div>
-
-        
 
             <!-- Modal Section  -->
             <div class="bg-modal">
@@ -71,20 +72,20 @@
                   </div>
                 </div>
             
-        <label id="speed" for="vol" class="range">Speed</label>
-        <input type="range" min="0" max="5" value="2" step="1" class="slider" id="vol" data-toggle="tooltip" title="Speed of the Animation">
-        <button id="run">RUN</button>
-        <button id="reset">RESET</button>
-    </section>
-    <script>
-        document.getElementById("custom").addEventListener("click", function(){
-            document.querySelector(".bg-modal").style.display="flex";
-        })
+                <label for="formControlRange" id="Asize">Size</label>
+                <input type="range" class="form-control-range input" min="10" max="300" value="30" data-toggle="tooltip" title="Size of the Array" id="size-array">        
 
-        document.querySelector(".close").addEventListener("click",function(){
-            document.querySelector(".bg-modal").style.display = "none";
-        })
-    </script>
+                <label for="formControlRange" id="Aspeed">Animation </label>
+                <input type="range" min="0" max="5" value="4" step="1" class="form-control-range" id="speed" data-toggle="tooltip" title="Speed of the Animation">
+
+        <!-- <label id="speed" for="vol" class="range">Speed</label>
+        <input type="range" min="0" max="5" value="2" step="1" class="slider" id="vol" data-toggle="tooltip" title="Speed of the Animation"> -->
+        <button id="run-button">RUN</button>
+        <button id="skip-button">SKIP</button>
+    </section>
+    <script src="try.js"></script>
+    <script src="Merge.js"></script>
+    
   
     
 </body>
