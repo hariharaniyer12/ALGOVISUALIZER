@@ -1,9 +1,9 @@
 document.getElementById("custom-array").addEventListener("click", function(){
-    document.querySelector(".bg-modal").style.display="flex";
+   document.querySelector(".bg-modal").style.display="flex";
 })
 
 document.querySelector(".close").addEventListener("click",function(){
-    document.querySelector(".bg-modal").style.display = "none";
+   document.querySelector(".bg-modal").style.display = "none";
 })
 
 
@@ -42,68 +42,96 @@ window.onload=generate_new_array;
 modal_save.addEventListener("click",generate_new_array);
 
 modal_save.onclick = function(){
-    space.style.display="flex";
+   space.style.display="flex";
 }
 
 function generate_new_array(){
-    console.log("in the geneate array function");
-    let custom_size = modal_size.value;
-    array_size.value=custom_size;
-    
-    let str = modal_text.value;
-    let temp = str.split(" ");
-
-    let array = [];
-    for(let i=0;i<temp.length;i++)array.push(temp[i]);
-    custom_array=array;
+   console.log("in the geneate array function");
+   let custom_size = modal_size.value;
+   array_size.value=custom_size;
    
-    space.innerHTML="";
-    total_size=array_size.value;
-    Asize.innerHTML="Size ("+total_size+")";
-    // if(!is_valid) custom_array_btn.innerHTML="<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Custom";
-    // if(!is_valid) custom_array_btn.className="btn btn-outline-primary my-2 my-sm-1"
-    //('.alert').alert('close');
-    change_speed();
-    for(let i=0;i<total_size;i++){
-       //if(is_valid)
-        bar_len[i]=custom_array[i];
-       // else bar_len[i] = Math.floor(Math.random()*560+20);
-       bar_div[i] = document.createElement("div");
-       space.appendChild(bar_div[i]);
-       apply_style(bar_div[i],"skyblue",bar_len[i]);
-    }
+   let str = modal_text.value;
+   let temp = str.split(" ");
+
+   let array = [];
+   for(let i=0;i<temp.length;i++)array.push(temp[i]);
+   custom_array=array;
+  
+   space.innerHTML="";
+   total_size=array_size.value;
+   Asize.innerHTML="Size ("+total_size+")";
+   // if(!is_valid) custom_array_btn.innerHTML="<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Custom";
+   // if(!is_valid) custom_array_btn.className="btn btn-outline-primary my-2 my-sm-1"
+   //('.alert').alert('close');
+   change_speed();
+   for(let i=0;i<total_size;i++){
+      array[i]=parseInt(array[i]);
+      custom_array = array;
+      //if(is_valid)
+       bar_len[i]=custom_array[i];
+       var maxnum = Math.max(bar_len[i]);
+      // else bar_len[i] = Math.floor(Math.random()*560+20);
+      bar_div[i] = document.createElement("div");
+      space.appendChild(bar_div[i]);
+      apply_style(bar_div[i],"skyblue",bar_len[i]);
+   }
 }
 
 function change_speed(){
-    Aspeed.innerHTML="Animation (" + Math.pow(2,parseInt(req_speed.value)) + "X)";
-    delay=20000/(total_size*Math.pow(2,parseInt(req_speed.value)));
+   Aspeed.innerHTML="Animation (" + Math.pow(2,parseInt(req_speed.value)) + "X)";
+   delay=20000/(total_size*Math.pow(2,parseInt(req_speed.value)));
 }
 
 function update_bar (element,color,height) {
-    cleartimeout=setTimeout(()=>{
-       if(total_size<=20)element.innerHTML= "<small >"+ height + "</small>";
-    element.style=" margin : 0.8px; " + "background-color:" + color + ";"+ "width: 100%;" + "height: " + height + "px; text-align: center;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;";
-    },totdelay+=delay);
+   cleartimeout=setTimeout(()=>{
+      if(total_size<=20)element.innerHTML= "<small >"+ height + "</small>";
+   element.style=" margin : 0.8px; " + "background-color:" + color + ";"+ "width: 100%;" + "height: " + height + "px; text-align: center;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;";
+   },totdelay+=delay);
 }
- 
- // style=color: black; text-align: center; text-overflow: ellipsis;
- // changes the color or height of the div element.
+
+// style=color: black; text-align: center; text-overflow: ellipsis;
+// changes the color or height of the div element.
 function apply_style(element,color,height) {
-    if(total_size<=20)element.innerHTML= "<small >"+ height + "</small>";
-    element.style=" margin : 1px; " + "background-color:" + color + ";"+ "width: 80%;" + "height: " + height + "px; text-align: center;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;";
+   if(total_size<=20)element.innerHTML= "<small >"+ height + "</small>";
+   element.style=" margin : 1px; " + "background-color:" + color + ";"+ "width: 80%;" + "height: " + height + "px; text-align: center;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;";
 }
 
 function swap(id1, id2, col1, col2){
-    update_bar(bar_div[id1],"red",bar_len[id1]);
-    update_bar(bar_div[id2],"red",bar_len[id2]);
-    [bar_len[id1], bar_len[id2]] = [bar_len[id2], bar_len[id1]];
-    update_bar(bar_div[id1],col1,bar_len[id1]);
-    if(id1!=id2) update_bar(bar_div[id2],col2,bar_len[id2]);
+   update_bar(bar_div[id1],"red",bar_len[id1]);
+   update_bar(bar_div[id2],"red",bar_len[id2]);
+   [bar_len[id1], bar_len[id2]] = [bar_len[id2], bar_len[id1]];
+   update_bar(bar_div[id1],col1,bar_len[id1]);
+   if(id1!=id2) update_bar(bar_div[id2],col2,bar_len[id2]);
 }
 
 function runalgo(){
-    totdelay=0;
-    // disable();
-    Merge();
-    // enable();
- }
+   totdelay=0;
+
+   // var canSee = $("#collapsibleNavId").is(":visible");
+   // alert(canSee);
+   // $('.navbar-toggler').click();
+   switch (selected_algo.value) {
+      case "Bubble" : 
+         Bubble();
+         break;
+      case "Merge" :
+         Merge();
+         break;
+      case "Quick" :
+         Quick();
+         break;
+      case "Selection" :
+         Selection();
+         break;
+      case "Heap" :
+         Heap();
+         break;
+      case "Insertion" :
+         Insertion();
+         break;
+      case "Count" :
+         Count();
+         break;
+   }
+   
+}
