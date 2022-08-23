@@ -79,7 +79,7 @@ ul{
     width: 103px;
     height: 50px;
     border-radius: 23px;
-
+    margin-left: 210px;
     
     
 }
@@ -108,10 +108,12 @@ ul{
 }
 #run-button{
     background-color: lightblue;
-    margin-top: 40px;
+    margin-top: 33px;
+    width: 103px;
+    height: 50px;
     padding: 10px 10px;
     border-radius: 15px;
-    margin-left: 580px;
+    margin-left: 200px;
 }
 
 #run-button:hover{
@@ -121,7 +123,9 @@ ul{
 
 #skip-button{
     background-color: lightblue;
-    margin-top: 40px;
+    margin-top: 33px;
+    width: 103px;
+    height: 50px;
     padding: 10px;
     margin-left: 12px;
     border-radius: 15px;
