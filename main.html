@@ -18,15 +18,54 @@
         <p id="signup">SIGNUP</p>
     </box>
 
-
+    
     <nav id="navigation">
-        <ul id="bubble sort">
-            <li class="sorting"><a href>Bubble Sort</a></li>
+        <ul id="nav bar">
+            <label for="sorting" id="sortinghead">Sorting Algo's:</label>
+            <select name="sorting" id="algo">
+            <option value="Merge">Merge Sort</option>
+            <option value="Quick">Quick Sort</option>
+            <option value="Insertion">Insertion Sort </option>
+            <option value="Bubble">Bubble Sort</option>
+            <option value="Heap">Heap Sort</option>
+            <option value="Selection">Selection Sort</option>
+            </select>
+
+            <!-- <label for="searching" id="searchhead">Searching Algo's:</label>
+            <select name="Searching" id="searching">
+            <option value="Binary Search">Binary Search</option>
+            <option value="Linear Search">Linear Search</option>
+            </select>
+
+            <label for="PathFinding" id="patheFindinghead">PathFinding Algo's:</label>
+            <select name="PathFinding" id="PathFinding">
+            <option value="Dijkstra's Algo">Dijkstra's Algo</option>
+            <option value="A* Algo">A* Algo</option>
+            <option value="BFS">BFS </option>
+            <option value="DFS">DFS</option> -->
+            </select>
+            <!-- <li class="sorting"><a href>Bubble Sort</a></li>
             <li class="sorting"><a href>Quick Sort</a></li>
             <li class="sorting"><a href>Insertion Sort</a></li>
             <li class="sorting"><a href>Selection Sort</a></li>
             <li class="sorting"><a href>Merge Sort</a></li>
-            <li class="sorting"><a href>Linear Search</a></li>
+            <li class="sorting"><a href>Linear Search</a></li> -->
+
+                <div> 
+                <button class="custom" name="custom"  type="submit" id="custom-array">Custom Array</button>
+                </div>
+
+                <label for="formControlRange" id="Asize">Size</label>
+                <input type="range" class="form-control-range input" min="5" max="300" value="30" data-toggle="tooltip" title="Size of the Array" id="size-array">        
+
+                <label for="formControlRange" id="Aspeed">Animation </label>
+                <input type="range" min="0" max="5" value="4" step="1" class="form-control-range" id="speed" data-toggle="tooltip" title="Speed of the Animation">
+
+                <button id="run-button">RUN</button>
+                <button id="skip-button">SKIP</button>
+
+       
+    
         </ul>
         
     </nav>
@@ -34,9 +73,9 @@
     <div id="array-space"></div>
 
     <section id="arraybtn">
-        <div> 
+        <!-- <div> 
         <button class="custom" name="custom"  type="submit" id="custom-array">Custom Array</button>
-        </div>
+        </div> -->
 
             <!-- Modal Section  -->
             <div class="bg-modal">
@@ -72,19 +111,23 @@
                   </div>
                 </div>
             
-                <label for="formControlRange" id="Asize">Size</label>
-                <input type="range" class="form-control-range input" min="10" max="300" value="30" data-toggle="tooltip" title="Size of the Array" id="size-array">        
-
-                <label for="formControlRange" id="Aspeed">Animation </label>
-                <input type="range" min="0" max="5" value="4" step="1" class="form-control-range" id="speed" data-toggle="tooltip" title="Speed of the Animation">
+                
 
         <!-- <label id="speed" for="vol" class="range">Speed</label>
         <input type="range" min="0" max="5" value="2" step="1" class="slider" id="vol" data-toggle="tooltip" title="Speed of the Animation"> -->
-        <button id="run-button">RUN</button>
-        <button id="skip-button">SKIP</button>
+        <!-- <button id="run-button">RUN</button>
+        <button id="skip-button">SKIP</button> -->
     </section>
-    <script src="try.js"></script>
+
+  
+
+    <script src="main.js"></script>
+    <script src="Bubble.js"></script>
     <script src="Merge.js"></script>
+    <script src="Quick.js"></script>
+    <script src="Insertion.js"></script>
+    <script src="Selection.js"></script>
+    <script src="Heap.js"></script>
     
   
     
