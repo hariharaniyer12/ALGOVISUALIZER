@@ -9,9 +9,9 @@ let Binarysearch = function (){
       
         // Find the middle index
         let mid=Math.floor((start + end)/2);
-        update_bar(bar_div[start],"yellow",bar_len[start]);
+        update_bar(bar_div[start],"orange",bar_len[start]);
+        update_bar(bar_div[end],"orange",bar_len[end]);
         update_bar(bar_div[mid],"yellow",bar_len[mid]);
-        update_bar(bar_div[end],"yellow",bar_len[end]);
       
         // Compare mid with given key x
         if (bar_len[mid]===x){
@@ -19,21 +19,25 @@ let Binarysearch = function (){
             return;
         }
          //return true;
-        update_bar(bar_div[start],"skyblue",bar_len[start]);
-        update_bar(bar_div[mid],"skyblue",bar_len[mid]);
-        update_bar(bar_div[end],"skyblue",bar_len[end]);
+        //update_bar(bar_div[start],"skyblue",bar_len[start]);
+       // update_bar(bar_div[mid],"skyblue",bar_len[mid]);
+        //update_bar(bar_div[end],"skyblue",bar_len[end]);
              
         // If element at mid is greater than x,
         // search in the left half of mid
         let temppp=bar_len[mid];
-        if(temppp > x)
+        if(temppp > x){
+            update_bar(bar_div[end],"skyblue",bar_len[end]);
+            update_bar(bar_div[mid],"skyblue",bar_len[mid]);
             return recursiveFunction(arr, x, start, mid-1);
-        else 
-        
-     
+        }
+        else{
+            update_bar(bar_div[start],"skyblue",bar_len[start]);   
+            update_bar(bar_div[mid],"skyblue",bar_len[mid]);  
             // If element at mid is smaller than x,
             // search in the right half of mid
             return recursiveFunction(arr, x, mid+1, end);
+        }
     }
     let temmp=Math.floor(document.getElementById("modal-search").value);
     recursiveFunction(bar_div, temmp, 0, total_size-1);
