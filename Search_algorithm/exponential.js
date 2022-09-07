@@ -3,12 +3,13 @@ function binarySearch(arr, g, r, x)
     if (r >= g)
     {
         let mid = Math.floor(g + (r-g) / 2);
-        update_bar(bar_div[g],"yellow",bar_len[g]);
-        update_bar(bar_div[mid],"yellow",bar_len[mid]);
-        update_bar(bar_div[r],"yellow",bar_len[r]);
+        //update_bar(bar_div[g],"yellow",bar_len[g]);
+        //update_bar(bar_div[mid],"yellow",bar_len[mid]);
+        //update_bar(bar_div[r],"yellow",bar_len[r]);
         update_bar(bar_div[g],"orange",bar_len[g]);
-        update_bar(bar_div[mid],"orange",bar_len[mid]);
         update_bar(bar_div[r],"orange",bar_len[r]);
+        update_bar(bar_div[mid],"yellow",bar_len[mid]);
+        //update_bar(bar_div[r],"orange",bar_len[r]);
    
         // If the element is present
         // at the middle itself
@@ -20,11 +21,16 @@ function binarySearch(arr, g, r, x)
         // If element is smaller than
         // mid, then it can only be 
         // present n left subarray
-        if (arr[mid] > x)
+        if (arr[mid] > x){
+        update_bar(bar_div[mid],"blue",bar_len[mid]);
+        update_bar(bar_div[r],"blue",bar_len[r]);
             return binarySearch(arr, g, mid-1 , x);
+        }
    
         // Else the element can only 
         // be present in right subarray
+        update_bar(bar_div[g],"blue",bar_len[g]);
+        update_bar(bar_div[mid],"blue",bar_len[mid]);
         return binarySearch(arr, mid + 1, r, x);
     }
    
@@ -57,11 +63,12 @@ function exponentialSearch(arr, n, x)
     binarySearch(arr, i/2, Math.min(i, n - 1), x);
 }
 function es(){
-    exponentialSearch(bar_len,total_size,50);
+    let temmp=Math.floor(document.getElementById("modal-search").value);
+    exponentialSearch(bar_len,total_size,temmp);
 }
 function changeclr(aa,bb){
     for(let w=aa;w<=bb;w++){
-        update_bar(bar_div[w],"orange",bar_len[w]);
+        update_bar(bar_div[w],"blue",bar_len[w]);
     }
     return;
 }
