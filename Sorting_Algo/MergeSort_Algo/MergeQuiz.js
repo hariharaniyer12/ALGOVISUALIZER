@@ -1,6 +1,3 @@
-// Dynamic Quiz App with randomly chosen multiple choice questions
-// Design and development by Micke Berg
-
 const main = document.querySelector('main');
 const theQuestion = document.querySelector('.the-question');
 const optionsFieldContainer = document.querySelector('.options-field');
@@ -14,6 +11,23 @@ const correctAnswerSpan = document.querySelector('.correct-answers');
 const percentage = document.querySelector('.percentage');
 const gameOver = document.querySelector('.game-over');
 const option = document.querySelector('.option');
+const quiz_btn = document.getElementById('quiz_btn');
+const quiz_body = document.getElementById('quiz-body');
+const myModal = document.getElementById('myModal');
+const close_symbol = document.getElementById('close_symbol');
+const quiz_container = document.querySelector('.quiz-container');
+const ansexp = document.getElementById('ansExp');
+
+quiz_btn.onclick = function(){
+  myModal.style.display="flex";
+  main.style.display="flex";
+  quiz_container.style.display="flex";
+}
+
+close_symbol.onclick = function(){
+  myModal.style.display="none";
+}
+
 const allQuestionsArr = [
   {
     q: 'Which of the following stable sorting algorithm takes the least time when applied to an almost sorted array?',
