@@ -1,6 +1,7 @@
 const exp_btn=document.getElementById("exp");
 const explaination1=document.getElementById("explaination");
 const close1=document.getElementById("close");
+//arrayname=[0,Infinity,Infinity,Infinity,Infinity,Infinity];
 
 exp_btn.onclick = function(){
   explaination1.style.display="block";
@@ -11,7 +12,9 @@ close1.onclick = function(){
 }
 
 document.getElementById("custom-array").addEventListener("click", function(){
-  document.querySelector(".bg-modal").style.display="flex";
+  //document.querySelector(".bg-modal").style.display="flex";
+  space.style.display="flex";
+  generate_new_array();
 })
 
 document.querySelector(".close").addEventListener("click",function(){
@@ -58,7 +61,7 @@ modal_save.addEventListener("click",generate_new_array);
 modal_save.onclick = function(){
   space.style.display="flex";
 }
-
+//let temorary=["0","Infinity","Infinity","Infinity","Infinity","Infinity"];
 // document.getElementById("quiz_btn").addEventListener("click", function(){
 //    document.getElementById("quiz_section").style.display="block";
 //  })
@@ -84,21 +87,21 @@ function generate_new_array(){
   let str = modal_text.value;
   let temp = str.split(" ");
 
-  let array = [];
+  let array = [0,Infinity,Infinity,Infinity,Infinity,Infinity];
   for(let i=0;i<temp.length;i++)array.push(temp[i]);
   custom_array=array;
  
   space.innerHTML="";
-  total_size=array_size.value;
+  total_size=6;
   Asize.innerHTML="Size ("+total_size+")";//original
 // Asize.innerHTML="Size";
   // if(!is_valid) custom_array_btn.innerHTML="<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Custom";
   // if(!is_valid) custom_array_btn.className="btn btn-outline-primary my-2 my-sm-1"
   //('.alert').alert('close');
   change_speed();
-  for(let i=0;i<total_size;i++){
-     array[i]=parseInt(array[i]);
-     custom_array = array;
+  for(let i=0;i<6;i++){
+    //array[i]=parseInt(array[i]);
+    custom_array = array;
      //if(is_valid)
       bar_len[i]=custom_array[i];
       var maxnum = Math.max(bar_len[i]);
@@ -118,7 +121,7 @@ function change_speed(){
 function update_bar (element,color,height) {
   cleartimeout=setTimeout(()=>{
      if(total_size<=20)element.innerHTML= "<small >"+ height + "</small>";
-  element.style=" margin : 0.8px; " + "background-color:" + color + ";"+ "width: 100%;" + "height: " + height*5 + "px; text-align: center;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;";
+  element.style=" margin : 0.8px; " + "background-color:" + color + ";"+ "width: 100%;" + "height: " + 10*5 + "px; text-align: center;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;";
   },totdelay+=delay);
 }
 
@@ -126,7 +129,7 @@ function update_bar (element,color,height) {
 // changes the color or height of the div element.
 function apply_style(element,color,height) {
   if(total_size<=20)element.innerHTML= "<small >"+ height + "</small>";
-  element.style=" margin : 1px; " + "background-color:" + color + ";"+ "width: 80%;" + "height: " + height*5 + "px; text-align: center;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;";
+  element.style=" margin : 1px; " + "background-color:" + color + ";"+ "width: 80%;" + "height: " + 10*5 + "px; text-align: center;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;";
 }
 
 // function swap(id1, id2, col1, col2){
