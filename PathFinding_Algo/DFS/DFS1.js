@@ -1,6 +1,7 @@
 const exp_btn=document.getElementById("exp");
 const explaination1=document.getElementById("explaination");
 const close1=document.getElementById("close");
+//arrayname=[0,Infinity,Infinity,Infinity,Infinity,Infinity];
 
 exp_btn.onclick = function(){
   explaination1.style.display="block";
@@ -11,7 +12,9 @@ close1.onclick = function(){
 }
 
 document.getElementById("custom-array").addEventListener("click", function(){
-  document.querySelector(".bg-modal").style.display="flex";
+  //document.querySelector(".bg-modal").style.display="flex";
+  space.style.display="flex";
+  generate_new_array();
 })
 
 document.querySelector(".close").addEventListener("click",function(){
@@ -25,7 +28,7 @@ const space=document.getElementById("array-space");
 const skip=document.getElementById("skip-button");
 const selected_algo=document.getElementById("algo");
 const req_speed=document.getElementById("speed");
-const quiz_btn=document.getElementById("quiz")
+// const quiz_btn=document.getElementById("quiz")
 
 const Asize=document.getElementById("Asize");
 const Aspeed=document.getElementById("Aspeed");
@@ -58,10 +61,10 @@ modal_save.addEventListener("click",generate_new_array);
 modal_save.onclick = function(){
   space.style.display="flex";
 }
-
-document.getElementById("quiz_btn").addEventListener("click", function(){
-   document.getElementById("quiz_section").style.display="block";
- })
+//let temorary=["0","Infinity","Infinity","Infinity","Infinity","Infinity"];
+// document.getElementById("quiz_btn").addEventListener("click", function(){
+//    document.getElementById("quiz_section").style.display="block";
+//  })
 
 // quiz_btn.onclick = function(){
 //    quizsection.style.display="flex";
@@ -84,21 +87,21 @@ function generate_new_array(){
   let str = modal_text.value;
   let temp = str.split(" ");
 
-  let array = [];
+  let array = [0,Infinity,Infinity,Infinity,Infinity,Infinity];
   for(let i=0;i<temp.length;i++)array.push(temp[i]);
   custom_array=array;
  
   space.innerHTML="";
-  total_size=array_size.value;
+  total_size=6;
   Asize.innerHTML="Size ("+total_size+")";//original
 // Asize.innerHTML="Size";
   // if(!is_valid) custom_array_btn.innerHTML="<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Custom";
   // if(!is_valid) custom_array_btn.className="btn btn-outline-primary my-2 my-sm-1"
   //('.alert').alert('close');
   change_speed();
-  for(let i=0;i<total_size;i++){
-     array[i]=parseInt(array[i]);
-     custom_array = array;
+  for(let i=0;i<6;i++){
+    //array[i]=parseInt(array[i]);
+    custom_array = array;
      //if(is_valid)
       bar_len[i]=custom_array[i];
       var maxnum = Math.max(bar_len[i]);
@@ -142,7 +145,7 @@ function apply_style(element,color,height) {
 function runalgo(){
   totdelay=0;
 
-  dj();
+  dfs();
  
   
 }

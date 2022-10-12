@@ -65,16 +65,26 @@ function nextdest(){
             ctx.lineTo(50,210);
             ctx.stroke();
             ctx.beginPath();//1st node lines
-            ctx.strokeStyle = "yellow";
+            ctx.strokeStyle = "#cccc00";
             ctx.moveTo(64,214);//1st line
             ctx.lineTo(136,286);
+            ctx.moveTo(98,132);
+        ctx.lineTo(106,132);
+        ctx.lineTo(106,140);
+        ctx.lineTo(98,140);
+        ctx.moveTo(106,136);
+        ctx.lineTo(98,136);//3(1,2)
             ctx.stroke();
             ctx.beginPath();
-            ctx.strokeStyle = "yellow";
+            ctx.strokeStyle = "#cccc00";
+            ctx.moveTo(106,260);
+        ctx.lineTo(98,260);
+        ctx.lineTo(98,268);
+        ctx.lineTo(106,268);
+        ctx.lineTo(106,264);
+        ctx.lineTo(98,264);//6
             ctx.moveTo(64,186);//2nd line
             ctx.lineTo(136,114);
-            //ctx.moveTO(150,120);//3rd line
-            //ctx.lineTo(150,280);
             ctx.stroke();
             },totdelay+=delay);
            }
@@ -96,7 +106,19 @@ function nextdest(){
                 ctx.lineTo(155,110);
                 ctx.stroke();
                 ctx.beginPath();//2nd node lines
-                ctx.strokeStyle = "yellow";
+                ctx.strokeStyle = "#cccc00";
+                ctx.moveTo(156,196);
+        ctx.lineTo(164,196);
+        ctx.lineTo(164,200);
+        ctx.lineTo(156,200);
+        ctx.lineTo(156,204);
+        ctx.lineTo(164,204);//2(2,3)
+        ctx.moveTo(254,86);
+        ctx.lineTo(246,86);
+        ctx.lineTo(246,90);
+        ctx.lineTo(254,90);
+        ctx.lineTo(254,94);
+        ctx.lineTo(246,94);//5(2,4)
                 ctx.moveTo(150,120);
                 ctx.lineTo(150,280);
                 ctx.moveTo(170,100);
@@ -123,9 +145,13 @@ function nextdest(){
                 ctx.stroke();
 
                 ctx.beginPath();//3rd node lines
-                ctx.strokeStyle = "yellow";
-                ctx.moveTo(164,286);
-                ctx.lineTo(336,114);
+                ctx.strokeStyle = "#cccc00";
+                ctx.moveTo(246,306);
+        ctx.lineTo(254,306);
+        ctx.lineTo(254,310);
+        ctx.lineTo(246,310);
+        ctx.lineTo(246,314);
+        ctx.lineTo(254,314);//2(3,5)
                 ctx.moveTo(170,300);
                 ctx.lineTo(330,300);
                 ctx.stroke();
@@ -149,7 +175,13 @@ function nextdest(){
             ctx.lineTo(345,310);
             ctx.stroke();
             ctx.beginPath();
-                ctx.strokeStyle= "yellow";
+                ctx.strokeStyle= "#cccc00";
+                ctx.moveTo(410,260);
+        ctx.lineTo(402,260);
+        ctx.lineTo(402,264);
+        ctx.lineTo(410,264);
+        ctx.lineTo(410,268);
+        ctx.lineTo(402,268);//5(6,5)
                 ctx.moveTo(364,286);
                 ctx.lineTo(436,214);
                 ctx.stroke();
@@ -165,9 +197,18 @@ function nextdest(){
             cleartimeout=setTimeout(()=>{
             ctx.beginPath();
             ctx.strokeStyle= "black";
-            //ctx.stroke();
-            //ctx.beginPath();//1st node lines
-            //ctx.strokeStyle = "yellow";
+            ctx.moveTo(98,132);
+        ctx.lineTo(106,132);
+        ctx.lineTo(106,140);
+        ctx.lineTo(98,140);
+        ctx.moveTo(106,136);
+        ctx.lineTo(98,136);//3(1,2)
+        ctx.moveTo(106,260);
+        ctx.lineTo(98,260);
+        ctx.lineTo(98,268);
+        ctx.lineTo(106,268);
+        ctx.lineTo(106,264);
+        ctx.lineTo(98,264);//6
             ctx.moveTo(64,214);//1st line
             ctx.lineTo(136,286);
             ctx.moveTo(64,186);//2nd line
@@ -181,6 +222,18 @@ function nextdest(){
             cleartimeout=setTimeout(()=>{
                 ctx.beginPath();//2nd node lines
                 ctx.strokeStyle = "black";
+                ctx.moveTo(156,196);
+        ctx.lineTo(164,196);
+        ctx.lineTo(164,200);
+        ctx.lineTo(156,200);
+        ctx.lineTo(156,204);
+        ctx.lineTo(164,204);//2(2,3)
+        ctx.moveTo(254,86);
+        ctx.lineTo(246,86);
+        ctx.lineTo(246,90);
+        ctx.lineTo(254,90);
+        ctx.lineTo(254,94);
+        ctx.lineTo(246,94);//5(2,4)
                 ctx.moveTo(150,120);
                 ctx.lineTo(150,280);
                 ctx.moveTo(170,100);
@@ -194,6 +247,12 @@ function nextdest(){
             cleartimeout=setTimeout(()=>{
             ctx.beginPath();//3rd node lines
             ctx.strokeStyle = "black";
+            ctx.moveTo(246,306);
+        ctx.lineTo(254,306);
+        ctx.lineTo(254,310);
+        ctx.lineTo(246,310);
+        ctx.lineTo(246,314);
+        ctx.lineTo(254,314);//2(3,5)
             ctx.moveTo(164,286);
             ctx.lineTo(336,114);
             ctx.moveTo(170,300);
@@ -225,6 +284,12 @@ function nextdest(){
             cleartimeout=setTimeout(()=>{
                 ctx.beginPath();
                 ctx.strokeStyle= "black";
+                ctx.moveTo(410,260);
+        ctx.lineTo(402,260);
+        ctx.lineTo(402,264);
+        ctx.lineTo(410,264);
+        ctx.lineTo(410,268);
+        ctx.lineTo(402,268);//5(6,5)
                 ctx.moveTo(364,286);
                 ctx.lineTo(436,214);
                 ctx.stroke();
@@ -256,6 +321,34 @@ function nextdest(){
     cleartimeout=setTimeout(()=>{
     ctx.beginPath();
     ctx.strokeStyle="red";
+    ctx.moveTo(98,132);
+        ctx.lineTo(106,132);
+        ctx.lineTo(106,140);
+        ctx.lineTo(98,140);
+        ctx.moveTo(106,136);
+        ctx.lineTo(98,136);//3(1,2)
+
+        ctx.moveTo(156,196);
+        ctx.lineTo(164,196);
+        ctx.lineTo(164,200);
+        ctx.lineTo(156,200);
+        ctx.lineTo(156,204);
+        ctx.lineTo(164,204);//2(2,3)
+
+        ctx.moveTo(246,306);
+        ctx.lineTo(254,306);
+        ctx.lineTo(254,310);
+        ctx.lineTo(246,310);
+        ctx.lineTo(246,314);
+        ctx.lineTo(254,314);//2(3,5)
+
+        ctx.moveTo(410,260);
+        ctx.lineTo(402,260);
+        ctx.lineTo(402,264);
+        ctx.lineTo(410,264);
+        ctx.lineTo(410,268);
+        ctx.lineTo(402,268);//5(6,5)
+
     ctx.moveTo(64,186);//2nd line
     ctx.lineTo(136,114);
     ctx.moveTo(150,120);
