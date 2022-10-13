@@ -19,7 +19,7 @@
 }
 
 .modal{
-  display: none; 
+  display: flex; 
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 0px; /* Location of the box */
